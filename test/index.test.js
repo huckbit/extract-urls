@@ -1,4 +1,4 @@
-const extractUrls = require("../lib/extracUrls");
+const extractUrls = require("../index.js");
 
 test("get urls from the given string", () => {
 
