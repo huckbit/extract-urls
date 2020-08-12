@@ -1,0 +1,22 @@
+{
+  "name": "extracturls",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "url",
+    "string",
+    "clear string"
+  ],
+  "author": "Massimiliano Ranauro <huckbit@gmail.com>",
+  "license": "ISC",
+  "description": "extract urls from a string",
+  "devDependencies": {
+    "jest": "^26.3.0"
+  }
+}

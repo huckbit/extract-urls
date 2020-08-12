@@ -1,0 +1,48 @@
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# system configuration #
+########################
+php.ini
+/.htaccess
+
+# OS generated files #
+######################
+.DS_Store
+.bowerrc
+.DS_Store?
+._*
+.vscode
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build Systems #
+######################
+node_modules/
+vendor/
+bower_components/
+/cms/user/templates/default_site/_variables
+.sass-cache
+.app/
+.idea/
+build/
+dist/
+maps/
