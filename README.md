@@ -10,13 +10,12 @@ npm i extract-urls
 
 ## Usage
 
-``` javascript
-const extractUrls = require("extract-urls")
+```javascript
+const extractUrls = require("extract-urls");
 
-let text = `You can read https://github.com/huckbit/extract-urls or https://www.npmjs.com/package/extract-urls for more info`
+let text = `You can read https://github.com/huckbit/extract-urls or https://www.npmjs.com/package/extract-urls for more info`;
 let urls = extractUrls(text);
 
-console.log(urls)
+console.log(urls);
 //=> ['https://github.com/huckbit/extract-urls', 'https://www.npmjs.com/package/extract-urls']
-
 ```
