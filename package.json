@@ -2,24 +2,34 @@
   "name": "extracturls",
   "version": "1.0.0",
   "main": "index.js",
-  "directories": {
-    "lib": "lib"
+  "author": {
+    "name": "Massimiliano Ranauro",
+    "email": "huckbit@gmail.com",
+    "url": "massimilianoranauro.com"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/huckbit/extractUrls"
   },
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
     "test": "jest"
   },
+  "files": [
+    "index.js"
+  ],
   "keywords": [
     "url",
+    "text",
     "string",
-    "clear string"
+    "extract",
+    "find",
+    "scrape"
   ],
-  "author": "Massimiliano Ranauro <huckbit@gmail.com>",
-  "license": "ISC",
-  "description": "extract urls from a string",
+  "license": "MIT",
+  "description": "Extract urls from a string and returns an array",
   "devDependencies": {
     "jest": "^26.3.0"
   }

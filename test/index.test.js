@@ -1,8 +1,8 @@
 const extractUrls = require("../index.js");
 
-const str = `this string contains to urls. This is the first one https://www.huckbit.com the second one https://cssloaders.com`;
-const num = 7;
-const expected = ["https://www.huckbit.com", "https://cssloaders.com"];
+const str = `You can read https://github.com/huckbit/extract-urls or https://www.npmjs.com/package/extract-urls for more info`;
+const numericValue = 7;
+const expected = ["https://github.com/huckbit/extract-urls", "https://www.npmjs.com/package/extract-urls"];
 
 test("Extract urls from the given string", () => {
 
@@ -11,10 +11,14 @@ test("Extract urls from the given string", () => {
 });
 
 
-test("Exception raised when something different from a string is passed", () => {
+test("Empty string to return undefined", () => {
 
-  expect(extractUrls(num)).toThrow(TypeError);
+  expect(extractUrls("")).toEqual(undefined);
 
 })
 
+test("Exception raised when something different from a string is passed", () => {
 
+  expect(() => { extractUrls(numericValue) }).toThrow(TypeError);
+
+})
