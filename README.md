@@ -6,8 +6,22 @@
 
 ## To install
 
-```bash
+### npm
+
+```sh
 npm i extract-urls
+```
+
+### yarn
+
+```sh
+yarn add extract-urls
+```
+
+### unpkg
+
+```html
+<script src="https://unpkg.com/extract-urls@1.0.0/index.js"></script>
 ```
 
 ## Usage
