@@ -12,7 +12,7 @@
     "url": "https://github.com/huckbit/extractUrls"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/huckbit"
   },
   "engines": {
     "node": ">=10"
