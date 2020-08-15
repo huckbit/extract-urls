@@ -11,9 +11,6 @@
     "type": "git",
     "url": "https://github.com/huckbit/extract-urls"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/extract-urls"
-  },
   "engines": {
     "node": ">=10"
   },
