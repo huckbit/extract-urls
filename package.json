@@ -1,6 +1,6 @@
 {
   "name": "extract-urls",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "author": {
     "name": "Massimiliano Ranauro",
@@ -10,6 +10,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/huckbit/extract-urls"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/huckbit"
   },
   "engines": {
     "node": ">=10"
