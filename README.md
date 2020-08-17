@@ -36,3 +36,7 @@ let urls = extractUrls(text);
 console.log(urls);
 //=> ['https://github.com/huckbit/extract-urls', 'https://www.npmjs.com/package/extract-urls']
 ```
+
+## Example application
+
+[https://extracturls.huckbit.com/](https://extracturls.huckbit.com/)
