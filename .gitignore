@@ -46,3 +46,4 @@ bower_components/
 build/
 dist/
 maps/
+example.js

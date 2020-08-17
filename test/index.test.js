@@ -3,6 +3,7 @@ const extractUrls = require("../index.js");
 const str = `You can read https://github.com/huckbit/extract-urls or https://www.npmjs.com/package/extract-urls for more info`;
 const strUppercase = `YOU CAN READ HTTPS://GITHUB.COM/HUCKBIT/EXTRACT-URLS OR HTTPS://WWW.NPMJS.COM/PACKAGE/EXTRACT-URLS for more info`;
 const numericValue = 7;
+const strWithoutUrls = "you can read a book";
 const expected = [
   "https://github.com/huckbit/extract-urls",
   "https://www.npmjs.com/package/extract-urls",
@@ -18,6 +19,10 @@ test("Expect lowercase url when uppercase is given", () => {
 
 test("Empty string to return undefined", () => {
   expect(extractUrls("")).toEqual(undefined);
+});
+
+test("String containing no urls to return undefined", () => {
+  expect(extractUrls(strWithoutUrls)).toEqual(undefined);
 });
 
 test("Exception raised when something different from a string is passed", () => {

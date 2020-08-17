@@ -10,7 +10,8 @@ module.exports = (str) => {
   }
 
   if (str) {
-    return str.match(regexp).map((item) => item.toLowerCase());
+    let urls = str.match(regexp);
+    return urls ? urls.map((item) => item.toLowerCase()) : undefined;
   } else {
     undefined;
   }
