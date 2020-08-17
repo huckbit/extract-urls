@@ -10,11 +10,7 @@ module.exports = (str) => {
   }
 
   if (str) {
-    return str
-      .replace(/\n/g, " ")
-      .split(" ")
-      .filter((item) => item.match(regexp))
-      .map((item) => item.toLowerCase());
+    return str.match(regexp).map((item) => item.toLowerCase());
   } else {
     undefined;
   }
