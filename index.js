@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = (str) => {
+module.exports = (str, lower = false) => {
   const regexp = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi;
 
   if (typeof str !== "string") {
@@ -11,7 +11,11 @@ module.exports = (str) => {
 
   if (str) {
     let urls = str.match(regexp);
-    return urls ? urls.map((item) => item.toLowerCase()) : undefined;
+    if (urls) {
+      return lower ? urls.map((item) => item.toLowerCase()) : urls;
+    } else {
+      undefined;
+    }
   } else {
     undefined;
   }

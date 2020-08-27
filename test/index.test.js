@@ -14,7 +14,9 @@ test("Extract urls from the given string", () => {
 });
 
 test("Expect lowercase url when uppercase is given", () => {
-  expect(extractUrls(strUppercase)).toEqual(expect.arrayContaining(expected));
+  expect(extractUrls(strUppercase, true)).toEqual(
+    expect.arrayContaining(expected)
+  );
 });
 
 test("Empty string to return undefined", () => {

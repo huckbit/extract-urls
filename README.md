@@ -22,7 +22,7 @@ yarn add extract-urls
 ### unpkg
 
 ```html
-<script src="https://unpkg.com/extract-urls@1.3.0/index.js"></script>
+<script src="https://unpkg.com/extract-urls@1.3.1/index.js"></script>
 ```
 
 ## Usage
@@ -34,6 +34,16 @@ let text = `You can read https://github.com/huckbit/extract-urls or https://www.
 let urls = extractUrls(text);
 
 console.log(urls);
+//=> ['https://github.com/huckbit/extract-urls', 'https://www.npmjs.com/package/extract-urls']
+```
+
+## Options
+
+To lowercase urls use the option `true`:
+
+```javascript
+let text = `You can read HTTPS://GITHUB.COM/HUCKBIT/EXTRACT-URLS or https://www.npmjs.com/package/extract-urls for more info`;
+let urls = extractUrls(text, true);
 //=> ['https://github.com/huckbit/extract-urls', 'https://www.npmjs.com/package/extract-urls']
 ```
 
