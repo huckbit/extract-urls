@@ -22,7 +22,7 @@ yarn add extract-urls
 ### unpkg
 
 ```html
-<script src="https://unpkg.com/extract-urls@1.3.1/index.js"></script>
+<script src="https://unpkg.com/extract-urls@1.3.2/index.js"></script>
 ```
 
 ## Usage
