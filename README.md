@@ -1,7 +1,5 @@
 # extract-urls
 
-[![Build Status](https://travis-ci.org/huckbit/extract-urls.svg?branch=master)](https://travis-ci.org/huckbit/extract-urls)
-[![npm version](https://badge.fury.io/js/extract-urls.svg)](https://badge.fury.io/js/extract-urls)
 
 > Extract all urls recognizing http / https from a string and returns an array of urls.
 
