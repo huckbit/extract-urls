@@ -3,7 +3,7 @@ const extractUrls = require("../index.js");
 const str = `You can read https://github.com/huckbit/extract-urls or https://www.npmjs.com/package/extract-urls for more info`;
 const strUppercase = `YOU CAN READ HTTPS://GITHUB.COM/HUCKBIT/EXTRACT-URLS OR HTTPS://WWW.NPMJS.COM/PACKAGE/EXTRACT-URLS for more info`;
 const urlsWithSpecialChars =
-  "https://example.com/!LkhkDA6L!VweK7hsDfl6bQoU3cDjCEg!Lsx";
+  "https://example.com/!'LkhkDA6L!VweK7hsDfl6bQoU3cDjCEg!Lsx";
 const numericValue = 7;
 const strWithoutUrls = "you can read a book";
 const expected = [
@@ -11,7 +11,7 @@ const expected = [
   "https://www.npmjs.com/package/extract-urls",
 ];
 const urlsWithSpecialCharsExpected = [
-  "https://example.com/!LkhkDA6L!VweK7hsDfl6bQoU3cDjCEg!Lsx",
+  "https://example.com/!'LkhkDA6L!VweK7hsDfl6bQoU3cDjCEg!Lsx",
 ];
 
 test("Extract urls from the given string", () => {
