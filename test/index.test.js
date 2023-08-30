@@ -6,7 +6,7 @@ const inputValues = {
   URLWithSpecialCharacters: "https://example.com/!'LkhkDA6L!VweK7hsDfl6bQoU3cDjCEg!Lsx",
   numericValue: 7,
   stringWithoutUrls: "you can read a book",
-  URLWithMarkdown: "[npm version](https://github.com/huckbit/extract-urls)",
+  URLWithMarkdown: "[github](https://github.com/huckbit/extract-urls) [npm](https://github.com/huckbit/extract-urls)",
 };
 
 const expectedValues = {
@@ -41,5 +41,5 @@ test("Exception raised when something different from a string is passed", () => 
 });
 
 test("Match URL from Markdown sample", () => {
-  expect(extractUrls(inputValues.URLWithMarkdown)).toEqual(expect.arrayContaining(expectedValues.URLsWithSpecialCharacters));
+  expect(extractUrls(inputValues.URLWithMarkdown)).toEqual(expect.arrayContaining(expectedValues.URLsList));
 });
