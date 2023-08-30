@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1693411510640" clover="3.2.0">
+  <project timestamp="1693411510640" name="All files">
+    <metrics statements="10" coveredstatements="10" conditionals="9" coveredconditionals="9" methods="2" coveredmethods="2" elements="21" coveredelements="21" complexity="0" loc="10" ncloc="10" packages="1" files="1" classes="1"/>
+    <file name="index.js" path="C:\Users\Max.Ranauro\devmax\extract-urls\index.js">
+      <metrics statements="10" coveredstatements="10" conditionals="9" coveredconditionals="9" methods="2" coveredmethods="2"/>
+      <line num="3" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="4" count="7" type="stmt"/>
+      <line num="6" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="10" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="11" count="5" type="stmt"/>
+      <line num="12" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

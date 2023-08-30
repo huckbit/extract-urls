@@ -1,27 +1,25 @@
 const extractUrls = require("../index.js");
 
-const str = `You can read https://github.com/huckbit/extract-urls or https://www.npmjs.com/package/extract-urls for more info`;
-const strUppercase = `YOU CAN READ HTTPS://GITHUB.COM/HUCKBIT/EXTRACT-URLS OR HTTPS://WWW.NPMJS.COM/PACKAGE/EXTRACT-URLS for more info`;
-const urlsWithSpecialChars =
-  "https://example.com/!'LkhkDA6L!VweK7hsDfl6bQoU3cDjCEg!Lsx";
-const numericValue = 7;
-const strWithoutUrls = "you can read a book";
-const expected = [
-  "https://github.com/huckbit/extract-urls",
-  "https://www.npmjs.com/package/extract-urls",
-];
-const urlsWithSpecialCharsExpected = [
-  "https://example.com/!'LkhkDA6L!VweK7hsDfl6bQoU3cDjCEg!Lsx",
-];
+const inputValues = {
+  basicString: `You can read https://github.com/huckbit/extract-urls or https://www.npmjs.com/package/extract-urls for more info`,
+  strUppercase: `YOU CAN READ HTTPS://GITHUB.COM/HUCKBIT/EXTRACT-URLS OR HTTPS://WWW.NPMJS.COM/PACKAGE/EXTRACT-URLS for more info`,
+  URLWithSpecialCharacters: "https://example.com/!'LkhkDA6L!VweK7hsDfl6bQoU3cDjCEg!Lsx",
+  numericValue: 7,
+  stringWithoutUrls: "you can read a book",
+  URLWithMarkdown: "[npm version](https://github.com/huckbit/extract-urls)",
+};
+
+const expectedValues = {
+  URLsList: ["https://github.com/huckbit/extract-urls", "https://www.npmjs.com/package/extract-urls"],
+  URLsWithSpecialCharacters: ["https://example.com/!'LkhkDA6L!VweK7hsDfl6bQoU3cDjCEg!Lsx"],
+};
 
 test("Extract urls from the given string", () => {
-  expect(extractUrls(str)).toEqual(expect.arrayContaining(expected));
+  expect(extractUrls(inputValues.basicString)).toEqual(expect.arrayContaining(expectedValues.URLsList));
 });
 
 test("Expect lowercase url when uppercase is given", () => {
-  expect(extractUrls(strUppercase, true)).toEqual(
-    expect.arrayContaining(expected)
-  );
+  expect(extractUrls(inputValues.strUppercase, true)).toEqual(expect.arrayContaining(expectedValues.URLsList));
 });
 
 test("Empty string to return undefined", () => {
@@ -29,17 +27,19 @@ test("Empty string to return undefined", () => {
 });
 
 test("String containing no urls to return undefined", () => {
-  expect(extractUrls(strWithoutUrls)).toEqual(undefined);
+  expect(extractUrls(inputValues.stringWithoutUrls)).toEqual(undefined);
 });
 
 test("Matching url containing special characters", () => {
-  expect(extractUrls(urlsWithSpecialChars)).toEqual(
-    expect.arrayContaining(urlsWithSpecialCharsExpected)
-  );
+  expect(extractUrls(inputValues.URLWithSpecialCharacters)).toEqual(expect.arrayContaining(expectedValues.URLsWithSpecialCharacters));
 });
 
 test("Exception raised when something different from a string is passed", () => {
   expect(() => {
-    extractUrls(numericValue);
+    extractUrls(inputValues.numericValue);
   }).toThrow(TypeError);
+});
+
+test("Match URL from Markdown sample", () => {
+  expect(extractUrls(inputValues.URLWithMarkdown)).toEqual(expect.arrayContaining(expectedValues.URLsWithSpecialCharacters));
 });
