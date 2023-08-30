@@ -6,7 +6,8 @@ const inputValues = {
   URLWithSpecialCharacters: "https://example.com/!'LkhkDA6L!VweK7hsDfl6bQoU3cDjCEg!Lsx",
   numericValue: 7,
   stringWithoutUrls: "you can read a book",
-  URLWithMarkdown: "[github](https://github.com/huckbit/extract-urls) [npm](https://github.com/huckbit/extract-urls)",
+  URLWithMarkdown: "[github](https://github.com/huckbit/extract-urls) [npm](https://www.npmjs.com/package/extract-urls)",
+  URLWithMarkdownUppercase: "[github](HTTPS://GITHUB.COM/HUCKBIT/EXTRACT-URLS) [npm](HTTPS://WWW.NPMJS.COM/PACKAGE/EXTRACT-URLS)",
 };
 
 const expectedValues = {
@@ -40,6 +41,10 @@ test("Exception raised when something different from a string is passed", () => 
   }).toThrow(TypeError);
 });
 
-test("Match URL from Markdown sample", () => {
+test("Match URL from Markdown", () => {
   expect(extractUrls(inputValues.URLWithMarkdown)).toEqual(expect.arrayContaining(expectedValues.URLsList));
+});
+
+test("Match URL from Markdown when URL is uppercase", () => {
+  expect(extractUrls(inputValues.URLWithMarkdownUppercase, true)).toEqual(expect.arrayContaining(expectedValues.URLsList));
 });
